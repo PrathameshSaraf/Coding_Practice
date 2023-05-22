@@ -1,0 +1,18 @@
+<html>
+   <head><title>saraf</title>
+   </head>
+   <body>
+     <h1 style = color:red;>returning anonymous function </h1>
+	 <script>
+	  var disp = function (a){
+	         return function(b){
+			 return a+b;
+			 };
+			 }
+			 var af = (disp(10));
+			document.write(af(20)) ;
+	   </script>
+	 
+   </body>
+</html>
+   

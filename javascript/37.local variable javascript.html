@@ -1,0 +1,24 @@
+<html>
+   <head><title>saraf</title>
+   </head>
+   <body>
+     <h1 style = color:red;>  local variable  </h1>
+	 <script>
+	  
+	  function show(){
+	  var j = "J a local variable of outer function";
+	  document.write(j + "<br>");
+	  
+	  function innerfun(){
+	   var k = "k a local variable of inner function";
+	   document.write(k +"<br>");
+	   document.write(j +"<br>");
+	   }
+	   innerfun();
+	   }
+	   show();
+	   </script>
+	 
+   </body>
+</html>
+   
