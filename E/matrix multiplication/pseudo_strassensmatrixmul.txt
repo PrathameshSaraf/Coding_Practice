@@ -1,0 +1,17 @@
+Algorithm STRESSEN_MAT_MUL (int *A, int *B, int *C, int n)
+// A and B are input matrices
+// C is the output matrix
+// All matrices are of size n x n
+
+if n == 1 then
+    *C = *C + (*A) * (*B)
+else
+    STRESSEN_MAT_MUL (A, B, C, n/4)
+    STRESSEN_MAT_MUL (A, B + (n/4), C + (n/4), n/4)
+    STRESSEN_MAT_MUL (A + 2 * (n/4), B, C + 2 * (n/4), n/4)
+    STRESSEN_MAT_MUL (A + 2 * (n/4), B + (n/4), C + 3 * (n/4), n/4)
+    STRESSEN_MAT_MUL (A + (n/4), B + 2 * (n/4), C, n/4)
+    STRESSEN_MAT_MUL (A + (n/4), B + 3 * (n/4), C + (n/4), n/4)
+    STRESSEN_MAT_MUL (A + 3 * (n/4), B + 2 * (n/4), C + 2 * (n/4), n/4)
+    STRESSEN_MAT_MUL (A + 3 * (n/4), B + 3 * (n/4), C + 3 * (n/4), n/4)
+end

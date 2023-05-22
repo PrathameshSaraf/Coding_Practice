@@ -1,0 +1,35 @@
+If n is odd then initialize min and max as the first element. 
+If n is even then initialize min and max as minimum and maximum of the first two elements respectively. 
+For the rest of the elements, pick them in pairs and compare their 
+maximum and minimum with max and min respectively. 
+######################
+Algorithm DC_MAXMIN (A, low, high)
+// Description : Find minimum and maximum element from array using divide and conquer approach
+// Input : Array A of length n, and indices low = 0 and high = n - 1
+// Output : (min, max) variables holding minimum and maximum element of array
+
+if n == 1 then
+    return (A[1], A[1])
+else if n == 2 then
+    if A[1] < A[2] then
+        return (A[1], A[2])
+    else
+        return (A[2], A[1])
+    else 
+    mid ← (low + high) / 2		
+    [LMin, LMax] = DC_MAXMIN (A, low, mid)	
+    [RMin, RMax] = DC_MAXMIN (A, mid + 1, high)
+    if LMax > RMax  then
+        // Combine solution
+        max ← LMax
+    else 
+        max ← RMax
+    end
+    if LMin < RMin then
+        // Combine solution
+        min ← LMin
+    else
+        min ← RMin
+    end
+    return (min, max)
+end

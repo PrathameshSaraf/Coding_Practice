@@ -1,0 +1,34 @@
+    binarySearch(arr, x, low, high)
+           if low > high
+               return False 
+   
+           else
+               mid = (low + high) / 2 
+                   if x == arr[mid]
+                   return mid
+       
+               else if x > arr[mid]        // x is on the right side
+                   return binarySearch(arr, x, mid + 1, high)
+               
+               else                        // x is on the left side
+                   return binarySearch(arr, x, low, mid - 1) 
+
+################################################################
+Algorithm BINARY_SEARCH(A, Key)
+// Description : Perform a binary search on array A
+// Input : Sorted array A of size n and Key to be searched
+// Output : Success / Failure
+
+low ← 1
+high ← n
+while low < high do
+    mid ← (low + high) / 2	
+    if A[mid] == key then
+        return mid
+    else if A[mid] < key then
+        low ← mid + 1	
+    else
+    high ← mid – 1
+    end
+end
+return 0

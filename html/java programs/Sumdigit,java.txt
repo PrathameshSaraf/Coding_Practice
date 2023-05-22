@@ -1,0 +1,20 @@
+import java.util.*;
+class Sumdigit
+{
+public static void main(String[]args)
+{
+Scanner in = new Scanner(System.in);
+
+System.out.println("enter the no");
+int n=in.nextInt();
+
+ while(n!=0)
+{
+int d=n%10;
+int sum=sum+d;
+n=n/10;
+}
+System.out.println("sum of digit is ="+sum);
+ 
+}
+}

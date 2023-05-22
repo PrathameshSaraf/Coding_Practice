@@ -1,0 +1,4 @@
+Run quick sort algorithm on the input array
+In this algorithm pick a pivot element and move it to it’s correct position
+Now, if index of pivot is equal to K then return the value, else if the index of pivot is greater than K, then recur for the left subarray, else recur for the right subarray 
+Repeat this process until the element at index K is not found
